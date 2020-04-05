@@ -1,3 +1,54 @@
 .sudoku-party {
-  font-size: 3em;
+  font-size: 2em;
+}
+
+.board {
+  text-align: center;
+  cursor: pointer;
+
+  -webkit-backface-visibility:  hidden;
+  -webkit-tap-highlight-color:  transparent;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  width:  40px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+}
+
+
+.col:nth-child(3n) {
+  border-right: 1px solid black;
+}
+
+.row:nth-child(3n + 1) {
+  border-top: 1px solid black;
+}
+
+.row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.current {
+  background-color: rgb(187, 231, 255);
+}
+.current-select, button {
+  margin-top: 1em;
+}
+.current-select__first,
+.current-select__second {
+  display: flex;
+}
+.current-select__first > div,
+.current-select__second > div {
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width:  40px;
+  border: 1px solid #d9d9d9;
+  text-align: center;
 }
