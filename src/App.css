@@ -15,9 +15,9 @@
 }
 
 .col {
-  width:  40px;
-  height: 40px;
   border: 1px solid #d9d9d9;
+  width: 1.1em;
+  height: 1.1em;
 }
 
 
@@ -38,17 +38,13 @@
 }
 .current-select, button {
   margin-top: 1em;
+  font-size: 0.8em;
 }
-.current-select__first,
-.current-select__second {
-  display: flex;
-}
-.current-select__first > div,
-.current-select__second > div {
+.current-select > div {
+  width: 1.2em;
+  height: 1.2em;
   cursor: pointer;
   display: inline-block;
-  height: 40px;
-  width:  40px;
   border: 1px solid #d9d9d9;
   text-align: center;
 }
