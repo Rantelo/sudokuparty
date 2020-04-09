@@ -1,43 +1,66 @@
 .sudoku-party {
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 .board {
-  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
-
-  -webkit-backface-visibility:  hidden;
-  -webkit-tap-highlight-color:  transparent;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  text-align: center;
 }
 
 .row {
-  display: flex;
+  display: inline-block;
 }
 
 .col {
   border: 1px solid #d9d9d9;
-  width: 1.1em;
-  height: 1.1em;
+  display: inline-block;
+  font-weight: 200;
+  height: 1.2em;
+  vertical-align: top;
+  width: 1.2em;
 }
-
+.col.original {
+  font-weight: 600;
+}
 
 .col:nth-child(3n) {
   border-right: 1px solid black;
 }
-
-.row:nth-child(3n + 1) {
-  border-top: 1px solid black;
+.col:nth-child(3n+1) {
+  border-left: 1px solid black;
+}
+.col:first-child {
+  border-left: 2px solid black;
+}
+.col:last-child {
+  border-right: 2px solid black;
 }
 
-.row:last-child {
+
+.row:nth-child(3n) > .col {
   border-bottom: 1px solid black;
+}
+.row:nth-child(3n+1) > .col {
+  border-top: 1px solid black;
+}
+.row:first-child > .col {
+  border-top: 2px solid black;
+}
+.row:last-child > .col {
+  border-bottom: 2px solid black;
 }
 
 .current {
   background-color: rgb(187, 231, 255);
 }
-.current-select, button {
-  margin-top: 1em;
+.current-select {
+  text-align: center;
+  margin: 1em auto;
   font-size: 0.8em;
 }
 .current-select > div {

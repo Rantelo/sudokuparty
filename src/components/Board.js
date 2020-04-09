@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Board = ({ numbers, setNumber }) => {
+const Board = ({ original = '', numbers, setNumber }) => {
   const cols = [];
   let rows = [];
 
@@ -8,24 +8,22 @@ const Board = ({ numbers, setNumber }) => {
     rows.push(
       <div
         key={`col${idx}`}
-        className="col"
-        onClick={() => setNumber(idx)}
+        className={`col${(original[idx] !== '0') ? ' original' : ''}`}
+        onClick={() => (original[idx] === '0') ? setNumber(idx): null}
       >
-        {(element === 0) ? "" : element}
+        {(element === '0') ? "" : element}
       </div>
     );
     if ((idx + 1) % 9 === 0 || idx === numbers.length - 1) {
       cols.push(
-        <div className="row" key={`row${idx}`} >
-          {rows}
-        </div>
+        <div className="row" key={`row${idx}`} > {rows} </div>
       );
       rows = [];
     }
   });
   return (
     <div className="board">
-  {cols}
+      {cols}
     </div>
   )
 }
