@@ -11,12 +11,9 @@ import Started from './pages/Started';
 
 function App() {
   return (
-    <div className="sudoku-party">
-      Hello World
       <Router>
         <AppRoutes/>
       </Router>
-    </div>
   );
 }
 
