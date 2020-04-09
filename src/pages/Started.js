@@ -5,7 +5,7 @@ import Board from '../components/Board';
 import NumberSelector from '../components/NumberSelector';
 
 function Started() {
-  const original = '100000000000000000000000000000000000000000000000000000000000000000000000000000001';
+  const original = '000300900020001007000000150157000400090040000000106030030207000509000800600004500';
   const [current, setCurrent] = React.useState('1');
   const [numbers, setNumbers] = React.useState(original);
 
