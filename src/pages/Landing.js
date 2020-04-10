@@ -1,9 +1,25 @@
 import React from 'react';
+import './Landing.scss';
+import Button from '../components/Button'
+import {useHistory} from 'react-router-dom';
 
 function Landing() {
+    const history = useHistory();
+    
     return(
         <div className="page page-landing">
-            Landing
+            <div className="container">
+                <h1>Sudoku Party</h1>
+    
+                <div className="wrapper-btn">
+                    <Button onClick={() => history.push('/edit')}>
+                        New Party
+                    </Button>
+                    <Button onClick={() => history.push('/new')}>
+                        Edit Party
+                    </Button>
+                </div>
+            </div>
         </div>
     );
 }
