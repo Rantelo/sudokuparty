@@ -1,11 +1,23 @@
 import React from 'react';
 import './Button.scss';
 
-const Button = ({children, iconUrl = '', onClick}) => {
+const Button = ({children, iconUrl = '', iconEl = null, onClick}) => {
 
-    const icon = (iconUrl !== '') && <span className='btn-icon'>
-        <img src={iconUrl} alt=''/>
-    </span>;
+    let icon;
+
+    if( iconUrl === '' && iconEl === null ) {
+       icon = null; 
+
+    } else if( iconEl !== null ) {
+        icon = <span className="btn-icon">
+            {iconEl}
+        </span>;
+        
+    } else if( iconUrl !== '' ) {
+        icon = <span className='btn-icon'>
+            <img src={iconUrl} alt=''/>
+        </span>;
+    }
 
     return (
         <button href className="btn" onClick={onClick}>
