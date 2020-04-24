@@ -8,7 +8,7 @@ const Button = ({children, iconUrl = '', onClick}) => {
     </span>;
 
     return (
-        <button href className="btn" onClick={onClick}>
+        <button className="btn" onClick={onClick}>
             <span>{children}</span>
             {icon}
         </button>

@@ -12,10 +12,10 @@ function Landing() {
                 <h1>Sudoku Party</h1>
     
                 <div className="wrapper-btn">
-                    <Button onClick={() => history.push('/edit')}>
+                    <Button onClick={() => history.push('/new')}>
                         New Party
                     </Button>
-                    <Button onClick={() => history.push('/new')}>
+                    <Button onClick={() => history.push('/edit')}>
                         Edit Party
                     </Button>
                 </div>
